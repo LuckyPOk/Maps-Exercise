@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Get Outside!</title>
+
+	<link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <meta name="theme-color" content="#ffffff" />
+	
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="script.js"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3F2bvlW7pJkC9ZeeCrK-c1fjlMPlVdwU&callback=initializeMap&libraries=places"
+    ></script>
+  </head>
+
+  <body>
+    <h1>Get Outside! Visit a Park.</h1>
+
+    <div id="map"></div>
+    
+    <div class="center">
+      <h3>Search Radius:</h3>
+      <input type="range" min="500" max="3000" value="500" class="slider" id="radius"><br>
+      <button onclick="changeRadius()">Search</button>
+    </div>
+  </body>
+</html>
